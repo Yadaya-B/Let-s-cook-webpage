@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Cook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Icon/favicon_Kitchen.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>🍳Let's Cook🍳</h1>
+            <p>ยินดีต้อนรับสู่ Let’s cook เรามาเริ่มทำอาหารกันเถอะ</p>
+        </div>
+        <div class="right">
+            <h2>👩🏻‍🍳เลือกประเภทหน่วย</h2>
+            <div class="tabs">
+                <div class="tab active" data-tab="volume">
+                    🥄 หน่วยปริมาตร
+                </div>
+                <div class="tab" data-tab="weight">
+                    ⚖️ หน่วยน้ำหนัก
+                </div>
+                <div class="tab" data-tab="temperature">
+                    🌡️ หน่วยอุณหภูมิ
+                </div>
+            </div>
+            <div id="volume" class="content active">
+                <div class="form-group">
+                    <label for="volume-input">ปริมาณที่ต้องการแปลง</label>
+                    <input type="number" id="volume-input" placeholder="ใส่ปริมาณ">
+                </div>
+                <div class="form-group">
+                    <label for="volume-from">จากหน่วย</label>
+                    <select id="volume-from">
+                        <option value="tsp">ช้อนชา</option>
+                        <option value="tbsp">ช้อนโต๊ะ</option>
+                        <option value="cup">ถ้วย</option>
+                        <option value="liter">ลิตร</option>
+                        <option value="ml">มิลลิลิตร</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="volume-to">เป็นหน่วย</label>
+                    <select id="volume-to">
+                        <option value="tsp">ช้อนชา</option>
+                        <option value="tbsp">ช้อนโต๊ะ</option>
+                        <option value="cup">ถ้วย</option>
+                        <option value="liter">ลิตร</option>
+                        <option value="ml">มิลลิลิตร</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button onclick="convertVolume()">แปลงหน่วย</button>
+                </div>
+                <div class="result" id="volume-result"></div>
+            </div>
+            <div id="weight" class="content">
+                <div class="form-group">
+                    <label for="weight-input">ปริมาณที่ต้องการแปลง</label>
+                    <input type="number" id="weight-input" placeholder="ใส่ปริมาณ">
+                </div>
+                <div class="form-group">
+                    <label for="weight-from">จากหน่วย</label>
+                    <select id="weight-from">
+                        <option value="g">กรัม</option>
+                        <option value="kg">กิโลกรัม</option>
+                        <option value="oz">ออนซ์</option>
+                        <option value="lb">ปอนด์</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight-to">เป็นหน่วย</label>
+                    <select id="weight-to">
+                        <option value="g">กรัม</option>
+                        <option value="kg">กิโลกรัม</option>
+                        <option value="oz">ออนซ์</option>
+                        <option value="lb">ปอนด์</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button onclick="convertWeight()">แปลงหน่วย</button>
+                </div>
+                <div class="result" id="weight-result"></div>
+            </div>
+            <div id="temperature" class="content">
+                <div class="form-group">
+                    <label for="temperature-input">ปริมาณที่ต้องการแปลง</label>
+                    <input type="number" id="temperature-input" placeholder="ใส่ปริมาณ">
+                </div>
+                <div class="form-group">
+                    <label for="temperature-from">จากหน่วย</label>
+                    <select id="temperature-from">
+                        <option value="celsius">เซลเซียส</option>
+                        <option value="fahrenheit">ฟาเรนไฮต์</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="temperature-to">เป็นหน่วย</label>
+                    <select id="temperature-to">
+                        <option value="celsius">เซลเซียส</option>
+                        <option value="fahrenheit">ฟาเรนไฮต์</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button onclick="convertTemperature()">แปลงหน่วย</button>
+                </div>
+                <div class="result" id="temperature-result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
